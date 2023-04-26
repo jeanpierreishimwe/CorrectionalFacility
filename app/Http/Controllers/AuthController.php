@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\LoginUserRequest;
 use Illuminate\Support\Facades\Hash;
 use App\Models\user;
 class AuthController extends Controller
@@ -19,7 +20,7 @@ return $this->error('','Credential do not match',401);
     $user = user::where('email',$request->email)->first();
     return $this->success([
         'user'=>$user,
-        'token'=>$user->createToken('Api TokEn of ' . $user->email)->plainTextToken,
+        'token'=>$user->createToken('Api TokEn of ' . $user->email)->plainTextToken, 
     ]);
 }
 public function register(StoreUserRequest $request){
