@@ -25,7 +25,7 @@ Route::post('/token/login',[AuthController::class,'login']);
 Route::post('/token/register',[AuthController::class,'register']);
 Route::get('/userList',[UserController::class,'listUsers']);
 Route::post('/registerUser',[UserController::class,'registerAUser']);
-Route::put('/updateUser/{id}',[UserController::class,'registerAUser']);
+Route::put('/updateUser/{id}',[UserController::class,' updateAUser']);
 
 //admin AdminListing
 Route::get('/AdminListings',[AdminController::class,'AdminListing']);
