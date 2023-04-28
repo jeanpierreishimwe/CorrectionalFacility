@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TasksController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/token/login',[AuthController::class,'login']);
 Route::post('/token/register',[AuthController::class,'register']);
+Route::get('/userList',[UserController::class,'listUsers']);
+Route::post('/registerUser',[UserController::class,'registerAUser']);
+Route::put('/updateUser/{id}',[UserController::class,'registerAUser']);
+
+//admin AdminListing
+Route::get('/AdminListings',[AdminController::class,'AdminListing']);
+
+Route::post('/RegisteringAdmin',[AdminController::class,'registerADmin']);
+
+
 
 //protected routing
 

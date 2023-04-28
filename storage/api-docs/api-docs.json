@@ -9,12 +9,116 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/": {
+        "/api/AdminListings": {
             "get": {
-                "description": "Home page",
+                "tags": [
+                    "Admin Route"
+                ],
+                "summary": "Summaries",
+                "description": "AdminDescription",
+                "operationId": "Titlings",
                 "responses": {
-                    "default": {
-                        "description": "Welcome page"
+                    "200": {
+                        "description": "Successfully retreived the data"
+                    }
+                }
+            }
+        },
+        "/api/RegisteringAdmin": {
+            "post": {
+                "tags": [
+                    "Admin Route"
+                ],
+                "summary": "Summaries",
+                "description": "AdminDescriptions",
+                "operationId": "Tittlin",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {}
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Response Message",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/userList": {
+            "get": {
+                "tags": [
+                    "User Route"
+                ],
+                "summary": "registering a new user",
+                "description": "Description",
+                "operationId": "TestId",
+                "responses": {
+                    "200": {
+                        "description": "Successfully retreived the data"
+                    }
+                }
+            }
+        },
+        "/api/registerUser": {
+            "post": {
+                "tags": [
+                    "User Route"
+                ],
+                "summary": "User Registration",
+                "description": "Description",
+                "operationId": "Title",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {}
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Response Message",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/updateUser/{id}": {
+            "put": {
+                "tags": [
+                    "User Route"
+                ],
+                "summary": "Summary",
+                "description": "Description",
+                "operationId": "Titles",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {}
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Response Message",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
                     }
                 }
             }

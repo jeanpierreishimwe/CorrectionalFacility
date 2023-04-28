@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\Auth\SocialLoginController;
+use Laravel\Socialite\Facades\Socialite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +20,8 @@ Route::get('/', function () {
 
 Route::get('auth/{provider}/redirect', [SocialLoginController::class,'redirect'])->name('auth.sociliate.redirect');
 Route::get('auth/{provider}/callback',[SocialLoginController::class,'callback'])->name('auth.sociliate.callback');
+
+ 
+
+ 
+    

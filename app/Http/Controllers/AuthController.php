@@ -7,6 +7,7 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\LoginUserRequest;
 use Illuminate\Support\Facades\Hash;
 use App\Models\user;
+
 class AuthController extends Controller
 {
   use HttpResponses;
